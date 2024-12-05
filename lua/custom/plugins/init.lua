@@ -4,11 +4,13 @@
 -- See the kickstart.nvim README for more information
 --
 
--- Nvim tree
-
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- line numbers
+vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
@@ -16,13 +18,30 @@ vim.opt.termguicolors = true
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
 
 return {
-  'nvim-tree/nvim-tree.lua',
-  version = '*',
-  lazy = false,
-  dependencies = {
-    'nvim-tree/nvim-web-devicons',
+
+  -- NVIM TREE
+  {
+    'nvim-tree/nvim-tree.lua',
+    version = '*',
+    lazy = false,
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    config = function()
+      require('nvim-tree').setup {}
+    end,
   },
-  config = function()
-    require('nvim-tree').setup {}
-  end,
+
+  -- SURROUND
+  {
+    'tpope/vim-surround',
+  },
+
+  -- SNEAK
+  { 'justinmk/vim-sneak' },
+
+  -- REPEAT
+  {
+    'tpope/vim-repeat',
+  },
 }
