@@ -130,4 +130,9 @@ return {
       vim.keymap.set('n', '<leader>ui', require('dapui').toggle)
     end,
   },
+
+  -- JAVA
+  {
+    'nvim-java/nvim-java',
+  },
 }
