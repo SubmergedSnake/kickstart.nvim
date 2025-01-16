@@ -45,6 +45,9 @@ return {
     'tpope/vim-repeat',
   },
 
+  --GIT
+  { 'tpope/vim-fugitive' },
+
   -- DEBUGGING
   { 'nvim-neotest/nvim-nio' },
   {
