@@ -65,6 +65,10 @@ return {
   {
     'tpope/vim-repeat',
   },
+
+  -- UNIMPAIRED
+  { 'tpope/vim-unimpaired' },
+
   --GIT
   { 'tpope/vim-fugitive' },
 
