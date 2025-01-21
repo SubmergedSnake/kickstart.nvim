@@ -53,13 +53,13 @@ return {
       vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
     end,
   },
+  -- SNEAK
+  { 'justinmk/vim-sneak' },
+
   -- SURROUND
   {
     'tpope/vim-surround',
   },
-
-  -- SNEAK
-  { 'justinmk/vim-sneak' },
 
   -- REPEAT
   {
@@ -161,5 +161,26 @@ return {
   -- JAVA
   {
     'nvim-java/nvim-java',
+  },
+
+  -- AI: CodeCompanion
+  {
+    'olimorris/codecompanion.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function()
+      require('codecompanion').setup {
+        strategies = {
+          chat = {
+            adapter = 'openai',
+          },
+          inline = {
+            adapter = 'openai',
+          },
+        },
+      }
+    end,
   },
 }
