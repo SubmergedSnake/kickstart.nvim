@@ -75,9 +75,12 @@ return {
   -- DEBUGGING
   { 'nvim-neotest/nvim-nio' },
 
-  { 'MunifTanjim/prettier.nvim', dependencies = {
-    'jose-elias-alvarez/null-ls.nvim',
-  } },
+  {
+    'MunifTanjim/prettier.nvim',
+    dependencies = {
+      'jose-elias-alvarez/null-ls.nvim',
+    },
+  },
 
   -- Linters, prettiers
   {
