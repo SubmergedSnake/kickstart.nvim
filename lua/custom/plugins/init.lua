@@ -74,6 +74,12 @@ return {
 
   -- DEBUGGING
   { 'nvim-neotest/nvim-nio' },
+
+  { 'MunifTanjim/prettier.nvim', dependencies = {
+    'jose-elias-alvarez/null-ls.nvim',
+  } },
+
+  -- Linters, prettiers
   {
     'mfussenegger/nvim-dap',
     config = function()
