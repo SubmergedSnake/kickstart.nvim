@@ -40,13 +40,6 @@ return {
       vim.keymap.set('n', '<leader>ta', '<cmd>AerialToggle!<CR>')
     end,
   },
-  -- SNEAK
-  { 'justinmk/vim-sneak' },
-
-  -- SURROUND
-  {
-    'tpope/vim-surround',
-  },
 
   -- REPEAT
   {
