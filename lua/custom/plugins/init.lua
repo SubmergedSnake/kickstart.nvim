@@ -4,19 +4,6 @@
 -- See the kickstart.nvim README for more information
 --
 
--- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- line numbers
-vim.wo.number = true
-vim.wo.relativenumber = true
-
--- optionally enable 24-bit colour
-vim.opt.termguicolors = true
--- custom mappings
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
-
 return {
 
   -- NVIM TREE
@@ -50,7 +37,7 @@ return {
         end,
       }
       -- You probably also want to set a keymap to toggle aerial
-      vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
+      vim.keymap.set('n', '<leader>ta', '<cmd>AerialToggle!<CR>')
     end,
   },
   -- SNEAK
