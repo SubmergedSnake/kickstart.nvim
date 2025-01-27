@@ -4,7 +4,7 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 
-local filetypes = { 'javascript', 'typescript' }
+local filetypes = { 'javascript', 'typescript', 'typescriptreact' }
 
 for _, ft in ipairs(filetypes) do
   ls.add_snippets(ft, {
