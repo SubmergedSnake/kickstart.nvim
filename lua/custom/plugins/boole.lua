@@ -6,6 +6,12 @@ return {
         increment = '<C-a>',
         decrement = '<C-x>',
       },
+      additions = {
+        { 'left', 'right' },
+        { 'up', 'down' },
+        { 'top', 'bottom' },
+        { '===', '!==' },
+      },
     }
   end,
 }
