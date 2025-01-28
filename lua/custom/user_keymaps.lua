@@ -22,3 +22,10 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- CodeCompanion
+vim.keymap.set('n', '<leader>tc', ':CodeCompanionChat Toggle<CR>', { desc = 'Toggle CodeCompanion Chat' })
+vim.keymap.set('v', '<leader>ex', ':CodeCompanion /explain<CR>', { desc = 'Explain visually selected code' })
+vim.keymap.set('n', '<leader>lex', ':CodeCompanion /lsp<CR>', { desc = 'Explain diagnostic error' })
+vim.keymap.set('v', '<leader>fix', ':CodeCompanion /fixcode<CR>', { desc = 'Fix visually selected code' })
+vim.keymap.set('v', '<leader>gu', ':CodeCompanion /tests<CR>', { desc = 'Generate unit tests for visually selected code' })
