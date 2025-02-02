@@ -29,3 +29,9 @@ vim.keymap.set('v', '<leader>ex', ':CodeCompanion /explain<CR>', { desc = 'Expla
 vim.keymap.set('n', '<leader>lex', ':CodeCompanion /lsp<CR>', { desc = 'Explain diagnostic error' })
 vim.keymap.set('v', '<leader>fix', ':CodeCompanion /fixcode<CR>', { desc = 'Fix visually selected code' })
 vim.keymap.set('v', '<leader>gu', ':CodeCompanion /tests<CR>', { desc = 'Generate unit tests for visually selected code' })
+
+-- keymaps for quick buffer, args list navigation
+vim.keymap.set('n', '<C-M-o>', ':bnext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<C-M-i>', ':bprevious<CR>', { desc = 'Prev buffer' })
+vim.keymap.set('n', '<M-o>', ':next<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<M-i>', ':previous<CR>', { desc = 'Prev buffer' })
