@@ -615,7 +615,10 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        groovyls = { cmd = { '/home/joonas/.local/share/nvim/mason/bin/groovy-language-server' } },
+        groovyls = {
+          cmd = { '/home/joonas/.local/share/nvim/mason/bin/groovy-language-server' },
+          filetypes = { 'groovy', 'gradle' },
+        },
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -662,6 +665,7 @@ require('lazy').setup({
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
+        ensure_installed = {},
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
@@ -675,6 +679,7 @@ require('lazy').setup({
             require('lspconfig').jdtls.setup {}
           end,
         },
+        automatic_installation = false,
       }
     end,
   },
