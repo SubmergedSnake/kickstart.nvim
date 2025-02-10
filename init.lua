@@ -617,7 +617,11 @@ require('lazy').setup({
       local servers = {
         groovyls = {
           cmd = { '/home/joonas/.local/share/nvim/mason/bin/groovy-language-server' },
-          filetypes = { 'groovy', 'gradle' },
+          filetypes = { 'groovy' },
+        },
+        gradle_ls = {
+          cmd = { '/home/joonas/.local/share/nvim/mason/bin/gradle-language-server' },
+          filetypes = { 'groovy' },
         },
         -- clangd = {},
         -- gopls = {},
