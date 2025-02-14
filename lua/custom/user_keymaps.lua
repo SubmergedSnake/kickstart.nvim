@@ -33,5 +33,5 @@ vim.keymap.set('v', '<leader>gu', ':CodeCompanion /tests<CR>', { desc = 'Generat
 -- keymaps for quick buffer, args list navigation
 vim.keymap.set('n', '<C-M-o>', ':bnext<CR>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<C-M-i>', ':bprevious<CR>', { desc = 'Prev buffer' })
-vim.keymap.set('n', '<M-o>', ':next<CR>', { desc = 'Next buffer' })
-vim.keymap.set('n', '<M-i>', ':previous<CR>', { desc = 'Prev buffer' })
+vim.keymap.set('n', '<M-o>', ':next<CR>', { desc = 'Next arg' })
+vim.keymap.set('n', '<M-i>', ':previous<CR>', { desc = 'Prev arg' })

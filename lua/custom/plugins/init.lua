@@ -143,7 +143,7 @@ return {
         dapui.close {}
       end
 
-      vim.keymap.set('n', '<leader>ui', require('dapui').toggle)
+      vim.keymap.set('n', '<leader>ui', require('dapui').toggle, { desc = 'Toggle DAP UI' })
     end,
   },
 
