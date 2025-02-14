@@ -858,7 +858,11 @@ require('lazy').setup {
     'neanias/everforest-nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
-      require('everforest').setup {
+      local colorscheme = require 'everforest'
+
+      -- Complains about missing fields, even though it will use defaults for the omitted ones
+      ---@diagnostic disable-next-line: missing-fields
+      colorscheme.setup {
         dim_inactive_windows = true,
       }
     end,
