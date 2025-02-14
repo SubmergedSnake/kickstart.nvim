@@ -30,8 +30,39 @@ vim.keymap.set('n', '<leader>lex', ':CodeCompanion /lsp<CR>', { desc = 'Explain 
 vim.keymap.set('v', '<leader>fix', ':CodeCompanion /fixcode<CR>', { desc = 'Fix visually selected code' })
 vim.keymap.set('v', '<leader>gu', ':CodeCompanion /tests<CR>', { desc = 'Generate unit tests for visually selected code' })
 
--- keymaps for quick buffer, args list navigation
-vim.keymap.set('n', '<C-M-o>', ':bnext<CR>', { desc = 'Next buffer' })
-vim.keymap.set('n', '<C-M-i>', ':bprevious<CR>', { desc = 'Prev buffer' })
-vim.keymap.set('n', '<M-o>', ':next<CR>', { desc = 'Next arg' })
-vim.keymap.set('n', '<M-i>', ':previous<CR>', { desc = 'Prev arg' })
+-- Cycle through buffers
+vim.keymap.set('n', '<C-M-o>', function()
+  xpcall(function()
+    vim.cmd 'bnext'
+  end, function()
+    vim.cmd 'bfirst'
+  end)
+end, { desc = 'Next buffer' })
+
+vim.keymap.set('n', '<C-M-i>', function()
+  xpcall(function()
+    vim.cmd 'bprevious'
+  end, function()
+    vim.cmd 'blast'
+  end)
+end, { desc = 'Brev buffer' })
+
+-- Cycle through args
+
+-- if we are already editing the first arg, open the last arg
+vim.keymap.set('n', '<M-i>', function()
+  xpcall(function()
+    vim.cmd 'prev'
+  end, function()
+    vim.cmd 'last'
+  end)
+end, { desc = 'Prev arg' })
+
+-- if we are already editing the last arg, open the first arg
+vim.keymap.set('n', '<M-o>', function()
+  xpcall(function()
+    vim.cmd 'next'
+  end, function()
+    vim.cmd 'first'
+  end)
+end, { desc = 'Next arg' })
