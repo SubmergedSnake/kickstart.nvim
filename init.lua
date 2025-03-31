@@ -737,6 +737,7 @@ require('lazy').setup {
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
+        terraform = { 'terraform_fmt' },
         javascript = { 'prettier', 'prettierd', stop_after_first = true },
         typescriptreact = { 'prettier', 'prettierd', stop_after_first = true },
         html = { 'prettier', 'prettierd', stop_after_first = true },
