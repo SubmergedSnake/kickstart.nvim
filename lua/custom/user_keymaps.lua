@@ -30,23 +30,6 @@ vim.keymap.set('n', '<leader>lex', ':CodeCompanion /lsp<CR>', { desc = 'Explain 
 vim.keymap.set('v', '<leader>fix', ':CodeCompanion /fixcode<CR>', { desc = 'Fix visually selected code' })
 vim.keymap.set('v', '<leader>gu', ':CodeCompanion /tests<CR>', { desc = 'Generate unit tests for visually selected code' })
 
--- Cycle through buffers
-vim.keymap.set('n', '<C-M-o>', function()
-  xpcall(function()
-    vim.cmd 'bnext'
-  end, function()
-    vim.cmd 'bfirst'
-  end)
-end, { desc = 'Next buffer' })
-
-vim.keymap.set('n', '<C-M-i>', function()
-  xpcall(function()
-    vim.cmd 'bprevious'
-  end, function()
-    vim.cmd 'blast'
-  end)
-end, { desc = 'Brev buffer' })
-
 -- Cycle through args
 
 -- if we are already editing the first arg, open the last arg
@@ -66,3 +49,23 @@ vim.keymap.set('n', '<M-o>', function()
     vim.cmd 'first'
   end)
 end, { desc = 'Next arg' })
+
+-- Buffer management
+vim.keymap.set('n', '<C-M-o>', function()
+  xpcall(function()
+    vim.cmd 'bnext'
+  end, function()
+    vim.cmd 'bfirst'
+  end)
+end, { desc = 'Next buffer' })
+
+vim.keymap.set('n', '<C-M-i>', function()
+  xpcall(function()
+    vim.cmd 'bprevious'
+  end, function()
+    vim.cmd 'blast'
+  end)
+end, { desc = 'Brev buffer' })
+
+-- Delete all buffers except this one
+vim.keymap.set('n', '<leader>bda', ':%bd|e#<CR>', { desc = 'Delete all the buffers except the current one' })
