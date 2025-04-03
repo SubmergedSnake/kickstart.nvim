@@ -159,6 +159,9 @@ return {
       'nvim-lua/plenary.nvim',
       'nvim-treesitter/nvim-treesitter',
     },
+    opts = {
+      auto_scroll = false,
+    },
     config = function()
       require('codecompanion').setup {
         strategies = {
