@@ -12,6 +12,10 @@ vim.opt.termguicolors = true
 -- Nvimtree
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
 
+-- Saving
+
+vim.keymap.set('n', '<C-s>', ':w<CR>', { desc = 'Save current file' })
+
 -- Args list functionality
 vim.keymap.set('n', '<leader>aa', ':arga<CR>', { desc = 'Add this buffer to the args list' })
 vim.keymap.set('n', '<leader>ad', ':argd<CR>', { desc = 'Delete this buffer from the args list' })
