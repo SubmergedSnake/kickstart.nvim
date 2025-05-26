@@ -171,6 +171,9 @@ return {
           inline = {
             adapter = 'openai',
           },
+          display = {
+            chat = { auto_scroll = false },
+          },
         },
       }
     end,

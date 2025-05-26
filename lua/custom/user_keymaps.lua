@@ -73,3 +73,7 @@ end, { desc = 'Brev buffer' })
 
 -- Delete all buffers except this one
 vim.keymap.set('n', '<leader>bda', ':%bd|e#<CR>', { desc = 'Delete all the buffers except the current one' })
+
+-- CodeCompanion
+
+vim.cmd [[cab cc CodeCompanion]]
