@@ -77,3 +77,5 @@ vim.keymap.set('n', '<leader>bda', ':%bd|e#<CR>', { desc = 'Delete all the buffe
 -- CodeCompanion
 
 vim.cmd [[cab cc CodeCompanion]]
+vim.cmd [[cab cce CodeCompanion /explain]]
+vim.cmd [[cab ccl CodeCompanion /lsp]]
