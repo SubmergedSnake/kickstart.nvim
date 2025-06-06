@@ -175,6 +175,15 @@ return {
             chat = { auto_scroll = false },
           },
         },
+        adapters = {
+          openai = function()
+            return require('codecompanion.adapters').extend('openai', {
+              env = {
+                api_key = 'cmd: cat ~/dev-environment/installers/bitwarden/openai-api-key',
+              },
+            })
+          end,
+        },
       }
     end,
   },
