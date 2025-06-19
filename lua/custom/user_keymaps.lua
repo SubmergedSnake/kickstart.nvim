@@ -13,6 +13,7 @@ vim.opt.termguicolors = true
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
 
 -- Saving
+
 vim.keymap.set('n', '<C-s>', ':w<CR>', { desc = 'Save current file' })
 
 -- Args list functionality
