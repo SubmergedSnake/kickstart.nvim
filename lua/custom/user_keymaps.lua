@@ -79,3 +79,6 @@ vim.keymap.set('n', '<leader>bda', ':%bd|e#<CR>', { desc = 'Delete all the buffe
 vim.cmd [[cab cc CodeCompanion]]
 vim.cmd [[cab cce CodeCompanion /explain]]
 vim.cmd [[cab ccl CodeCompanion /lsp]]
+
+-- Markdown
+vim.keymap.set('n', '<leader>m', ':RenderMarkdown buf_toggle<CR>', { desc = 'Toggle Markdown' })
